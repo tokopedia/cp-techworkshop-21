@@ -1,0 +1,17 @@
+{
+  "repository_name": "cp-techworkshop-21",
+  "description": "Code base for Tech Workshop Oct 2021 by Cloud Platform",
+  "directorate": "TECH",
+  "namespace": "cloudplatform",
+  "security_owner": "prima.adi@tokopedia.com",
+  "app": [
+    {
+      "name": "cp-techworkshop",
+      "description": "Tech Workshop Oct 2021",
+      "owner": "prima.adi@tokopedia.com",
+      "slack_channel": "infra",
+      "db": [""]
+    }
+  ],
+  "last_update":"24/09/2021"
+}
