@@ -1,0 +1,30 @@
+---
+- import_tasks: debian.yml
+  when: ansible_os_family == "Debian"
+
+- name: copy website files to the server's document root
+  copy:
+    src: "{{ app_root }}/"
+    dest: "{{ document_root }}/"
+    mode: preserve
+  tags:
+  - update-website
+
+- name: apply nginx template
+  template:
+    src: templates/nginx.conf.j2
+    dest: /etc/nginx/sites-available/default
+  notify: restart nginx
+  tags:
+  - update-nginx-conf
+  - update-website-and-nginx-conf
+
+- name: enable new site
+  file:
+    src: /etc/nginx/sites-available/default
+    dest: /etc/nginx/sites-enabled/default
+    state: link
+  notify: restart nginx
+  tags:
+  - update-nginx-conf
+  - update-website-and-nginx-conf

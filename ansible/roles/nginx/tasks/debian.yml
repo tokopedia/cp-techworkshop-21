@@ -1,0 +1,12 @@
+---
+- name: perform a dist-upgrade
+  apt:
+    force_apt_get: True
+    update_cache: True
+    upgrade: dist
+
+- name: install nginx
+  apt:
+    name: nginx
+    state: latest
+    update_cache: yes
