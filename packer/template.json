@@ -15,7 +15,8 @@
       "network": "vpc-workshop-default",
       "subnetwork": "subnet-a",
       "type": "googlecompute",
-      "zone": "{{user `zone`}}"
+      "zone": "{{user `zone`}}",
+      "account_file": "/etc/service-account.json"
     }
   ],
   "post-processors": [],
