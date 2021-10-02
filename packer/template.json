@@ -21,7 +21,7 @@
   "post-processors": [],
   "provisioners": [
     {
-      "script": "packer/script/provisioner.sh",
+      "script": "script/provisioner.sh",
       "type": "shell"
     }
   ],
