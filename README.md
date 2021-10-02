@@ -34,5 +34,5 @@ docker pull gcr.io/tkpd-stag-cloud-workshop-27c9/workspace:ubuntu
 - Run the container with mount this project directory
 
 ```
-docker run --rm -it -v $PWD:/workspace -w=/workspace gcr.io/tkpd-stag-cloud-workshop-27c9/workspace:ubuntu bash
+docker run --rm -it -v $PWD/workspace:/workspace -w=/workspace gcr.io/tkpd-stag-cloud-workshop-27c9/workspace:ubuntu bash
 ```

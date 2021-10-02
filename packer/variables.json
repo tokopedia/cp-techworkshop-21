@@ -1,0 +1,6 @@
+{
+    "distro_name": "ubuntu-2004",
+    "machine_type": "n1-standard-1",
+    "my_name": "myimage-william",
+    "zone": "asia-southeast1-b"
+}
