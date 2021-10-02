@@ -34,5 +34,13 @@ docker pull gcr.io/tkpd-stag-cloud-workshop-27c9/workspace:ubuntu
 - Run the container with mount this project directory
 
 ```
-docker run --rm -it -v $PWD:/workspace -w=/workspace gcr.io/tkpd-stag-cloud-workshop-27c9/workspace:ubuntu bash
+docker run -it -v $PWD:/workspace -w=/workspace gcr.io/tkpd-stag-cloud-workshop-27c9/workspace:ubuntu bash
+
+# To attach a new shell into the container:
+export CONTAINER_ID=$(docker ps -q)
+docker exec -it "$CONTAINER_ID" /bin/bash
+
+# To detach from the container:
+# Hold CTRL key, and then hit 'p' then 'q' (do not release the CTRL key)
+CTRL-p-q
 ```

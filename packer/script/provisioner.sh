@@ -11,6 +11,9 @@ function main {
 
     printf "== Installing nginx ==\n"
     sudo DEBIAN_FRONTEND=noninteractive apt-get -qqy install nginx
+
+    printf "== Writing index.html ==\n"
+    echo "Hello from Packer!" > /var/www/html/index.nginx-debian.html
 }
 
 main "$@"
